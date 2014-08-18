@@ -40,6 +40,7 @@ if [ 'type' = `hostname` ]; then
   alias vis='~/project/psparrow/src/vis/visdump'
   alias fix='ssh namriv05@fix'
   alias def='ssh def'
+  alias ls='ls --color=auto'
 
   export EDG_BASE='/home/khheo/project/edg/release_4.0/'
   export LD_LIBRARY_PATH=/usr/local/lib:.
