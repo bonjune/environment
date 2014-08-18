@@ -71,7 +71,7 @@ export JAVAFINCH='/home/khheo/project/javafinch/javafinch.jar'
 export JAVA_HOME='/usr/lib/jvm/java-6-sun/'
 #export JAVA_HOME='/home/khheo/jdk1.5.0_22'
 #export JAVA_HOME='/home/khheo/j2sdk1.4.2_19'
-export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/khheo/javalib/jdom/build/jdom.jar'
+export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/khheo/javalib/jdom/build/jdom.jar:/home/khheo/project/flowdroid/heros/slf4j-api2.jar'
 #export CLASSPATH='.:/home/khheo/jdk1.5.0_22/jre/lib'
 #export CLASSPATH='.:..:/home/khheo/j2sdk1.4.2_19/jre/lib:/home/khheo/j2sdk1.4.2_19/lib/tools.jar:/home/khheo/javalib/jdom/build/jdom.jar'
 #for xerces
