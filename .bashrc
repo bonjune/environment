@@ -81,6 +81,7 @@ export OCAMLRUNPARAM='b'
 #export PATH=/home/khheo/j2sdk1.4.2_19/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH
 #export PATH="/home/khheo/local/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH"
 export PATH="/home/khheo/jre1.6.0_38/bin:/home/khheo/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH"
+export SVN_EDITOR=vim
 # bash script loader
 if [ -f ~/.bash_loader ]; then
 	source ~/.bash_loader
