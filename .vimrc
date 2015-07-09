@@ -27,7 +27,6 @@ endif
 
 set fileencoding=korea
 set bs=2
-set mouse=nc
 
 " for tab vs. space problems
 set softtabstop=2
@@ -35,8 +34,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set listchars=tab:>.,eol:$
-autocmd FileType make setlocal noexpandtab
 
+set mouse=nc
+set ttymouse=xterm2
 set autoindent
 set autowrite
 set cindent

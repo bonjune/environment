@@ -35,7 +35,9 @@ esac
 export CLICOLOR=1
 export SVN_EDITOR=vim
 
-if [ 'type' = `hostname` ]; then
+alias vi='vim'
+alias sr='screen -r main'
+if [ 'type' = `hostname` ] || [ 'ropas' = `hostname` ] ; then
   alias vis='~/project/psparrow/src/vis/visdump'
   alias fix='ssh namriv05@fix'
   alias def='ssh def'
@@ -44,7 +46,7 @@ if [ 'type' = `hostname` ]; then
   alias ls='ls --color=auto'
 
   export EDG_BASE='/home/khheo/project/edg/release_4.0/'
-  export LD_LIBRARY_PATH=/usr/local/lib:.
+#  export LD_LIBRARY_PATH=/usr/local/lib:.
 
   export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/khheo/javalib/jdom/build/jdom.jar'
   #export CLASSPATH='.:/home/khheo/jdk1.5.0_22/jre/lib'
@@ -56,6 +58,7 @@ if [ 'type' = `hostname` ]; then
   #export PATH=/home/khheo/j2sdk1.4.2_19/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH
   #export PATH="/home/khheo/local/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH"
   export PATH="/home/khheo/jre1.6.0_38/bin:/home/khheo/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH"
+  eval `opam config env`
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
 fi
@@ -64,3 +67,6 @@ fi
 if [ -f ~/.bash_loader ]; then
 	source ~/.bash_loader
 fi
+
+
+
