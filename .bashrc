@@ -37,7 +37,7 @@ export SVN_EDITOR=vim
 
 alias vi='vim'
 alias sr='screen -r main'
-if [ 'type' = `hostname` ] || [ 'ropas' = `hostname` ] ; then
+if [ 'type' = `hostname` ] || [ 'ropas' = `hostname` ] || [ 'hakjoo-Super-Server' = `hostname` ]; then
   alias vis='~/project/psparrow/src/vis/visdump'
   alias fix='ssh namriv05@fix'
   alias def='ssh def'
@@ -58,6 +58,9 @@ if [ 'type' = `hostname` ] || [ 'ropas' = `hostname` ] ; then
   #export PATH=/home/khheo/j2sdk1.4.2_19/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH
   #export PATH="/home/khheo/local/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH"
   export PATH="/home/khheo/jre1.6.0_38/bin:/home/khheo/bin:/home/khheo/project/SAirac/SAirac/bin:/home/khheo/project/SAirac/SAirac/src/airacil/bin:/home/khheo/project/SAirac/SAirac/libs/cil/bin:$PATH"
+  export PATH="$HOME/.linuxbrew/bin:$PATH"
+  export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+  export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   eval `opam config env`
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
