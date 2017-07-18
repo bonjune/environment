@@ -4,26 +4,25 @@ set encoding=utf-8
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 
-if version >=500
-    let c_comment_strings=1
-    syntax on
-    set hlsearch
-    set mousehide
+let c_comment_strings=1
+syntax on
+filetype plugin on
+    
+set hlsearch
+set mousehide
 
-    highlight Normal          gui=NONE guibg=MidnightBlue  guifg=White
-    highlight NonText         gui=NONE guibg=blue4
-    highlight Comment         gui=NONE guibg=MidnightBlue  guifg=LightGreen
-    highlight Constant        gui=NONE guibg=grey20        guifg=LightPink
-    highlight Identifier      gui=NONE guibg=MidnightBlue  guifg=LightSkyBlue
-    highlight Statement       gui=NONE guibg=MidnightBlue  guifg=LightCyan
-    highlight PreProc         gui=NONE guibg=MidnightBlue  guifg=wheat
-    highlight Type            gui=NONE guibg=MidnightBlue  guifg=gold
-    highlight Special         gui=NONE guibg=grey20        guifg=RosyBrown
-    highlight Ignore          gui=NONE guibg=MidnightBlue  guifg=magenta4
-    highlight Error           gui=NONE guibg=Red           guifg=White
-    highlight Todo            gui=NONE guibg=grey20        guifg=orange
-
-endif
+highlight Normal          gui=NONE guibg=MidnightBlue  guifg=White
+highlight NonText         gui=NONE guibg=blue4
+highlight Comment         gui=NONE guibg=MidnightBlue  guifg=LightGreen
+highlight Constant        gui=NONE guibg=grey20        guifg=LightPink
+highlight Identifier      gui=NONE guibg=MidnightBlue  guifg=LightSkyBlue
+highlight Statement       gui=NONE guibg=MidnightBlue  guifg=LightCyan
+highlight PreProc         gui=NONE guibg=MidnightBlue  guifg=wheat
+highlight Type            gui=NONE guibg=MidnightBlue  guifg=gold
+highlight Special         gui=NONE guibg=grey20        guifg=RosyBrown
+highlight Ignore          gui=NONE guibg=MidnightBlue  guifg=magenta4
+highlight Error           gui=NONE guibg=Red           guifg=White
+highlight Todo            gui=NONE guibg=grey20        guifg=orange
 
 set fileencoding=korea
 set bs=2
