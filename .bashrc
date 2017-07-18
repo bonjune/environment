@@ -61,11 +61,12 @@ if [ 'type' = `hostname` ] || [ 'ropas' = `hostname` ] || [ 'hakjoo-Super-Server
   export PATH="$HOME/.linuxbrew/bin:$PATH"
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-  eval `opam config env`
+
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
 fi
 
+eval `opam config env`
 # bash script loader
 if [ -f ~/.bash_loader ]; then
 	source ~/.bash_loader
