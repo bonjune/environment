@@ -37,7 +37,7 @@ export SVN_EDITOR=vim
 
 alias vi='vim'
 alias sr='screen -r main'
-if [ 'type' = `hostname` ] || [ 'ropas' = `hostname` ] || [ 'hakjoo-Super-Server' = `hostname` ]; then
+if [ `uname` = 'Linux' ]; then
   alias vis='~/project/psparrow/src/vis/visdump'
   alias fix='ssh namriv05@fix'
   alias def='ssh def'
