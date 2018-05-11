@@ -42,7 +42,7 @@ if [ `uname` = 'Linux' ]; then
   export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/khheo/.linuxbrew/lib:/usr/lib/x86_64-linux-gnu/:."
   export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/khheo/javalib/jdom/build/jdom.jar'
   export OCAMLRUNPARAM='b' #'b, s=2G, l=1G, i=50M, o=80'
-  export PATH="$HOME/.linuxbrew/bin:$HOME/bin:$PATH"
+  export PATH="/sbin:/usr/sbin:/usr/local/sbin:/usr/lib/jvm/java-8-oracle/bin/:$HOME/.linuxbrew/bin:$HOME/bin:$PATH"
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   
