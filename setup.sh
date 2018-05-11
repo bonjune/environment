@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-ln -s .bash_profile ../.bash_profile
-ln -s .bashrc ../.bashrc
-ln -s .vim ../.vim
-ln -s .vimrc ../.vimrc
-ln -s .screenrc ../.screenrc
+ln -s $(pwd)/.bash_profile ~/.bash_profile
+ln -s $(pwd)/.bashrc ~/.bashrc
+ln -s $(pwd)/.vim ~/.vim
+ln -s $(pwd)/.vimrc ~/.vimrc
+ln -s $(pwd)/.screenrc ~/.screenrc
