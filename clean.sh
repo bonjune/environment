@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm ../.bash_profile
-rm ../.bashrc
-rm ../.vim
-rm ../.vimrc
-rm ../.screenrc
+rm -f ../.bash_profile
+rm -f ../.bashrc
+rm -rf ../.vim
+rm -f ../.vimrc
+rm -f ../.screenrc
