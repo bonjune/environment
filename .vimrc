@@ -57,6 +57,7 @@ highlight Todo            gui=NONE guibg=grey20        guifg=orange
 
 set fileencoding=korea
 set bs=2
+set colorcolumn=80
 
 " for tab vs. space problems
 set softtabstop=2
