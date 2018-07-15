@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'souffle-lang/souffle.vim'
+Plugin 'rgrinberg/vim-ocaml'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -57,7 +58,6 @@ highlight Todo            gui=NONE guibg=grey20        guifg=orange
 
 set fileencoding=korea
 set bs=2
-set colorcolumn=80
 
 " for tab vs. space problems
 set softtabstop=2
