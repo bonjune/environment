@@ -13,6 +13,9 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'souffle-lang/souffle.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-fugitive'
+Plugin 'itchyny/lightline.vim'
+Plugin 'michaeljsmith/vim-indent-object'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

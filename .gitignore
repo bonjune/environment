@@ -1,4 +1,3 @@
-.*.swp
-.*.swo
+.*.sw?
 .netrwhist
-.vim/bundle/nerdcommenter/
+.vim/bundle/*
