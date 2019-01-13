@@ -115,6 +115,7 @@ if [ `uname` = 'Linux' ]; then
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 else
+  export LSCOLORS='ExFxCxDxBxegedabagaced'
   alias ls='ls -G'
 fi
 
