@@ -1,3 +1,3 @@
-git clone --recursive git@github.com:KihongHeo/environment.git
+git clone git@github.com:KihongHeo/environment.git
 
-Launch vim and run :PluginInstall and :BundleInstall
+Launch vim and run :PlugInstall
