@@ -35,3 +35,19 @@ endfunction
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ocamlformat
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:neoformat_ocaml_ocamlformat = {
+"            \ 'exe': 'ocamlformat',
+"            \ 'args': ['--disable-outside-detected-project']
+"            \ }
+
+let g:neoformat_enabled_ocaml = ['ocamlformat']
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
