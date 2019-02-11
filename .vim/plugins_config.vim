@@ -51,3 +51,24 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => clang-format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('mac')
+  map <C-K> :py3f /usr/local/Cellar/llvm/7.0.0/share/clang/clang-format.py<cr>
+  imap <C-K> <c-o>:py3f /usr/local/Cellar/llvm/7.0.0/share/clang/clang-format.py<cr>
+  function! Formatonsave()
+    let l:formatdiff = 1
+    py3f /usr/local/Cellar/llvm/7.0.0/share/clang/clang-format.py
+  endfunction
+else
+  map <C-K> :py3f /usr/share/clang/clang-format-7/clang-format.py<cr>
+  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-7/clang-format.py<cr>
+  function! Formatonsave()
+    let l:formatdiff = 1
+    py3f /usr/share/clang/clang-format-7/clang-format.py
+  endfunction
+endif
+autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()

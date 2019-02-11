@@ -116,7 +116,7 @@ if [ `uname` = 'Linux' ]; then
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
-  alias ls='ls -G'
+  export PATH="$HOME/usr/bin/:/usr/local/opt/llvm/bin:$PATH"
 fi
 
 alias vi='vim'
