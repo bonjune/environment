@@ -49,7 +49,7 @@ let g:neoformat_enabled_ocaml = ['ocamlformat']
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
+  autocmd BufWritePre *.ml,*.mli undojoin | Neoformat
 augroup END
 
 
