@@ -98,14 +98,15 @@ export SVN_EDITOR=vim
 export GIT_EDITOR=vim
 export PYTHONIOENCODING=UTF-8
 
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
 if [ `uname` = 'Linux' ]; then
   # enable color support of ls and also add handy aliases
   if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
   fi
 
   export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/khheo/.linuxbrew/lib:/usr/lib/x86_64-linux-gnu/:."
