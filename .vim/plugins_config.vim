@@ -72,3 +72,18 @@ else
   endfunction
 endif
 autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
+
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
+nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>p :YcmCompleter GetParent<CR>
