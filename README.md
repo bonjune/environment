@@ -7,3 +7,5 @@
 - Shell: https://github.com/mvdan/sh
 - C/C++: https://clang.llvm.org/docs/ClangFormat.html
 - JS/JSON: https://github.com/beautify-web/js-beautify
+5. YCM setup
+- [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
