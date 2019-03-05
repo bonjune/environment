@@ -87,3 +87,4 @@ nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>t :YcmCompleter GetType<CR>
 nnoremap <leader>p :YcmCompleter GetParent<CR>
+nnoremap <leader>f :YcmCompleter FixIt<CR>
