@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # This file is NOT licensed under the GPLv3, which is the license for the rest
 # of YouCompleteMe.
 #
@@ -35,7 +37,7 @@ import subprocess
 import ycm_core
 
 DIR_OF_THIS_SCRIPT = os.path.abspath( os.path.dirname( __file__ ) )
-DIR_OF_THIRD_PARTY = os.path.join( DIR_OF_THIS_SCRIPT, 'third_party' )
+DIR_OF_THIRD_PARTY = os.path.join( DIR_OF_THIS_SCRIPT, 'plugged', 'YouCompleteMe', 'third_party' )
 SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]
 
 # These are the compilation flags that will be used in case there's no
