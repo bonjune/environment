@@ -97,10 +97,13 @@ export CLICOLOR=1
 export SVN_EDITOR=vim
 export GIT_EDITOR=vim
 export PYTHONIOENCODING=UTF-8
+export CC=clang
+export CXX=clang++
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias python='python3'
 
 if [ `uname` = 'Linux' ]; then
   # enable color support of ls and also add handy aliases
