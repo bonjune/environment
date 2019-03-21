@@ -1,3 +1,8 @@
+" this is a workaround for the conflict between vim 8.1 and python 3.7
+if has('python3')
+  silent! python3 1
+endif
+
 source ~/.vim/plug.vim
 source ~/.vim/plugins_config.vim
 
