@@ -9,3 +9,7 @@
 - JS/JSON: https://github.com/beautify-web/js-beautify
 5. YCM setup
 - [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
+- Install
+```
+cd ~/.vim/plugged/YouCompleteMe/ && python3 install.py --clangd-completer
+```
