@@ -28,4 +28,5 @@ sudo update-alternatives --install \
   --slave /usr/bin/llvm-stress llvm-stress /usr/bin/llvm-stress-8 \
   --slave /usr/bin/llvm-symbolizer llvm-symbolizer /usr/bin/llvm-symbolizer-8 \
   --slave /usr/bin/llvm-tblgen llvm-tblgen /usr/bin/llvm-tblgen-8 \
-  --slave /usr/bin/opt opt /usr/bin/opt-8
+  --slave /usr/bin/opt opt /usr/bin/opt-8 \
+  --slave /usr/bin/llc llc /usr/bin/llc-8
