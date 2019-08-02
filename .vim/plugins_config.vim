@@ -71,7 +71,7 @@ else
     py3f /usr/share/clang/clang-format-8/clang-format.py
   endfunction
 endif
-autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => YouCompleteMe
