@@ -8,6 +8,7 @@
 - C/C++: https://clang.llvm.org/docs/ClangFormat.html
 - JS/JSON: https://github.com/beautify-web/js-beautify
 5. YCM setup
+- [YCM](https://github.com/ycm-core/YouCompleteMe)
 - [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
 - Install
 ```
