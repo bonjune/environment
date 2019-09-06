@@ -99,6 +99,8 @@ export GIT_EDITOR=vim
 export PYTHONIOENCODING=UTF-8
 export CC=clang
 export CXX=clang++
+export C_INCLUDE_PATH=$HOME/.local/include
+export CPLUS_INCLUDE_PATH=$HOME/.local/include
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
