@@ -5,10 +5,11 @@ cd environment
 ```
 ## iTerm
 - [Color schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
+- [Powerline Font](https://github.com/powerline/fonts/): use Hack
 
 ## Z Shell
 - [Oh My Zsh](https://ohmyz.sh)
-- [Powerline Font](https://github.com/powerline/fonts/)
+
 ## Vim
 1. Install [vim-plug](https://github.com/junegunn/vim-plug)
 2. Launch vim and run :PlugInstall
