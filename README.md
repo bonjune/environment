@@ -5,7 +5,9 @@ cd environment
 ```
 ## iTerm
 - [Color schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
-- [Powerline Font](https://github.com/powerline/fonts/): use Hack
+  * use Argonaut 
+- [Powerline Font](https://github.com/powerline/fonts/)
+  * use Hack
 
 ## Z Shell
 - [Oh My Zsh](https://ohmyz.sh)
