@@ -3,6 +3,9 @@ git clone git@github.com:KihongHeo/environment.git
 cd environment
 ./setup.sh
 ```
+## iTerm
+- [Color schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
+
 ## Z Shell
 - [Oh My Zsh](https://ohmyz.sh)
 - [Powerline Font](https://github.com/powerline/fonts/)
