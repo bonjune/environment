@@ -68,6 +68,8 @@ ZSH_THEME="agnoster"
 plugins=(git osx docker zsh-syntax-highlighting screen)
 source $ZSH/oh-my-zsh.sh
 
+unsetopt share_history
+
 # User configuration
 
 export CLICOLOR=1
