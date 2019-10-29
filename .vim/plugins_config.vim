@@ -40,10 +40,12 @@ let g:vimshell_force_overwrite_statusline = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ocamlformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:neoformat_ocaml_ocamlformat = {
-"            \ 'exe': 'ocamlformat',
-"            \ 'args': ['--disable-outside-detected-project']
-"            \ }
+let g:neoformat_ocaml_ocamlformat = {
+            \ 'exe': 'ocamlformat',
+            \ 'no_append': 1,
+            \ 'stdin': 1,
+            \ 'args': ['--enable-outside-detected-project', '--name', '"%:p"', '-']
+            \ }
 
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 
