@@ -72,6 +72,9 @@ unsetopt share_history
 
 # User configuration
 
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
+
 export CLICOLOR=1
 export SVN_EDITOR=vim
 export GIT_EDITOR=vim
