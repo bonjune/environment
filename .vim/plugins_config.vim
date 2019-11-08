@@ -51,7 +51,7 @@ let g:neoformat_enabled_ocaml = ['ocamlformat']
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json undojoin | Neoformat
+  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
 
@@ -93,3 +93,16 @@ nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>t :YcmCompleter GetType<CR>
 nnoremap <leader>p :YcmCompleter GetParent<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Merlin with syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_ocaml_checkers = ['merlin']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
