@@ -12,6 +12,7 @@ cd environment
 ## Z Shell
 - [Oh My Zsh](https://ohmyz.sh)
 - [Syntac highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [Autosuggestion](https://github.com/zsh-users/zsh-autosuggestions)
 
 ## Vim
 1. Install [vim-plug](https://github.com/junegunn/vim-plug)
