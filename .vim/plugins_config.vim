@@ -51,7 +51,7 @@ let g:neoformat_enabled_ocaml = ['ocamlformat']
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
 
@@ -66,11 +66,11 @@ if has('mac')
     py3f /usr/local/Cellar/llvm/8.0.0/share/clang/clang-format.py
   endfunction
 else
-  map <C-K> :py3f /usr/share/clang/clang-format-8/clang-format.py<cr>
-  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-8/clang-format.py<cr>
+  map <C-K> :py3f /usr/share/clang/clang-format-9/clang-format.py<cr>
+  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-9/clang-format.py<cr>
   function! Formatonsave()
     let l:formatdiff = 1
-    py3f /usr/share/clang/clang-format-8/clang-format.py
+    py3f /usr/share/clang/clang-format-9/clang-format.py
   endfunction
 endif
 autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
