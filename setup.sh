@@ -12,9 +12,11 @@ if [[ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]]; then
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
 
-ln -s $(pwd)/.bash_profile ~/.bash_profile
-ln -s $(pwd)/.bashrc ~/.bashrc
-ln -s $(pwd)/.zshrc ~/.zshrc
-ln -s $(pwd)/.vim ~/.vim
-ln -s $(pwd)/.vimrc ~/.vimrc
-ln -s $(pwd)/.screenrc ~/.screenrc
+ln -s -f $(pwd)/.bash_profile ~/.bash_profile
+ln -s -f $(pwd)/.bashrc ~/.bashrc
+ln -s -f $(pwd)/.zshrc ~/.zshrc
+ln -s -f $(pwd)/.vim ~/.vim
+ln -s -f $(pwd)/.vimrc ~/.vimrc
+ln -s -f $(pwd)/.screenrc ~/.screenrc
+ln -s -f $(pwd)/.tmux.conf ~/.tmux.conf
+ln -s -f $(pwd)/.tmux.conf.local ~/.tmux.conf.local

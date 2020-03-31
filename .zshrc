@@ -98,6 +98,7 @@ if [ `uname` = 'Linux' ]; then
   export PATH="$HOME/.local/bin:/snap/bin:$HOME/usr/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/lib/jvm/java-8-oracle/bin/:$HOME/.linuxbrew/bin:$PATH"
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+  export PYTHONPATH="$HOME/.local/lib/python3.7/site-packages"
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
   export PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/usr/bin/:/usr/local/opt/llvm/bin:$PATH"
@@ -105,6 +106,7 @@ fi
 
 alias vi='vim'
 alias sr='screen -D -r main'
+alias ta='tmux attach -t main'
 
 eval `opam config env`
 
