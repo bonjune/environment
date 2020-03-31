@@ -206,15 +206,15 @@ set ttyscroll=5
 set winheight=4
 set cinoptions=:0,p0,t0,<1s
 if &term =~ "xterm"
-if has ("terminfo")
+  if has ("terminfo")
     set t_Co=8
     set t_Sf=p1%dm
     set t_Sb=p1%dm
-else
+  else
     set t_Co=8
     set t_Sf=dm
     set t_Sb=dm
-endif
+  endif
 endif
 
 
