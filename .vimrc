@@ -257,11 +257,6 @@ function! OpamConfOcpIndent()
 endfunction
 let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
 
-function! OpamConfOcpIndex()
-  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
-endfunction
-let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
-
 function! OpamConfMerlin()
   let l:dir = s:opam_share_dir . "/merlin/vim"
   execute "set rtp+=" . l:dir
