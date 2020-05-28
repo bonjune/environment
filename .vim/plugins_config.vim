@@ -51,7 +51,7 @@ let g:neoformat_enabled_ocaml = ['ocamlformat']
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune,*.c try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
 
