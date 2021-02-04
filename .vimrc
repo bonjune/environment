@@ -168,7 +168,7 @@ let c_comment_strings=1
 
 set mousehide
 
-set fileencoding=korea
+set fileencoding=utf-8
 set bs=2
 
 set softtabstop=2
