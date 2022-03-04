@@ -16,4 +16,5 @@ Plug 'souffle-lang/souffle.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer --system-libclang' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'vim-syntastic/syntastic'
+Plug 'github/copilot.vim'
 call plug#end()

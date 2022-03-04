@@ -177,9 +177,14 @@ set shiftwidth=2
 set listchars=tab:>.,eol:$
 
 set mouse=nc
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+  set notextmode
+  set ttyscroll=5
+endif
 set autoindent
 set autowrite
+set autoread
 set cindent
 set nu
 set nocompatible
@@ -188,7 +193,6 @@ set cpoptions=cFs$
 set helpheight=15
 set infercase
 set keywordprg=man\ -a
-set notextmode
 
 set scrolloff=3
 
@@ -201,7 +205,7 @@ set smartcase
 set splitbelow
 set nostartofline
 set nowrap
-set ttyscroll=5
+
 "set whichwrap=<,>,[,]
 set winheight=4
 set cinoptions=:0,p0,t0,<1s
@@ -247,7 +251,7 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-let s:opam_share_dir = system("opam config var share")
+let s:opam_share_dir = system("opam var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
 
 let s:opam_configuration = {}
