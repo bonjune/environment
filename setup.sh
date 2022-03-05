@@ -21,3 +21,6 @@ ln -s -f $(pwd)/.screenrc ~/.screenrc
 ln -s -f $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s -f $(pwd)/.tmux.conf.local ~/.tmux.conf.local
 ln -s -f $(pwd)/nvim ~/.config/nvim
+
+# for YouCompleteMe support with neovim
+pip3 install pynvim
