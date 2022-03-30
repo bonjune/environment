@@ -106,3 +106,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => AutoPairs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" This is a workaround: when using nvim Esc-p toggles Autopairs when using nvim
+let g:AutoPairsShortcutToggle = '<C-p>'
+
+let g:shfmt_opt="-ci -i 2"
