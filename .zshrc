@@ -103,6 +103,7 @@ if [ `uname` = 'Linux' ]; then
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
   export PATH="$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
+  eval "$(rbenv init -)"
 fi
 
 alias vi='nvim'
