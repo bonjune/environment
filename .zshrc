@@ -102,7 +102,7 @@ if [ `uname` = 'Linux' ]; then
   export PYTHONPATH="$HOME/.local/lib/python3.7/site-packages"
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
-  export PATH="$HOME/.rbenv/bin:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
+  export PATH="$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
 fi
 
 alias vi='nvim'
