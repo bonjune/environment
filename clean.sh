@@ -6,3 +6,4 @@ rm -f ~/.zshrc
 rm -rf ~/.vim
 rm -f ~/.vimrc
 rm -f ~/.screenrc
+rm -rf ~/.config/nvim
