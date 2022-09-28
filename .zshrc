@@ -103,7 +103,7 @@ if [ `uname` = 'Linux' ]; then
   export PATH="$HOME/.local/bin:/snap/bin:$HOME/usr/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/lib/jvm/java-8-oracle/bin/:$HOME/.linuxbrew/bin:$PATH"
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-  export PYTHONPATH="$HOME/.local/lib/python3.9/site-packages"
+  export PYTHONPATH="$HOME/.local/lib/python3.8/site-packages"
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
   export PATH="$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
