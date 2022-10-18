@@ -114,6 +114,9 @@ alias vi='nvim'
 alias sr='screen -D -r main'
 alias ta='tmux attach -t main'
 
+# use nvm 17 for coc
+nvm use 17 > /dev/null
+
 eval `opam config env`
 
 # You may need to manually set your language environment

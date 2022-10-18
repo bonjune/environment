@@ -17,4 +17,5 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer -
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'vim-syntastic/syntastic'
 Plug 'github/copilot.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()

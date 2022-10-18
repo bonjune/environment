@@ -89,10 +89,45 @@ let g:ycm_python_binary_path = '/usr/bin/python3'
 
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
-nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>t :YcmCompleter GetType<CR>
 nnoremap <leader>p :YcmCompleter GetParent<CR>
-nnoremap <leader>f :YcmCompleter FixIt<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Coc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
+
+
+
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "<S-Tab>"
+inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "<Up>"
+inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "<Down>"
+
+" Turn on diagnostics always
+autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Copilot
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use <C-a> to apply completion.
+imap <silent><script><expr> <C-a> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
+" Use <C-p>, <C-n> to cycle through completion options.
+imap <C-p> <Plug>(copilot-previous)
+imap <C-n> <Plug>(copilot-next)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Merlin with syntastic
@@ -111,6 +146,6 @@ let g:syntastic_check_on_wq = 0
 " => AutoPairs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " This is a workaround: when using nvim Esc-p toggles Autopairs when using nvim
-let g:AutoPairsShortcutToggle = '<C-p>'
+" let g:AutoPairsShortcutToggle = '<C-p>'
 
 let g:shfmt_opt="-ci -i 2"
