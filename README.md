@@ -24,5 +24,5 @@ cd environment
 - C/C++: https://clang.llvm.org/docs/ClangFormat.html
 - JS/JSON: https://github.com/beautify-web/js-beautify
 4. Coc setup
-- node >= 17
+- node >= 17 ([nvm](https://github.com/nvm-sh/nvm) 이용)
 - Launch vim and run `:CocInstall coc-json coc-pyright coc-clangd`
