@@ -116,7 +116,7 @@ inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "<Up>"
 inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "<Down>"
 
 " Turn on diagnostics always
-autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
+autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow"') })
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Copilot
