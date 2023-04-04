@@ -116,7 +116,8 @@ inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "<Up>"
 inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "<Down>"
 
 " Turn on diagnostics always
-autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow"') })
+" autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow"') })
+" autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Copilot
@@ -145,7 +146,8 @@ let g:syntastic_check_on_wq = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => AutoPairs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" This is a workaround: when using nvim Esc-p toggles Autopairs when using nvim
-" let g:AutoPairsShortcutToggle = '<C-p>'
+" This is a workaround: when using nvim, Esc-p toggles Autopairs
+" conflicting with Esc and paste
+let g:AutoPairsShortcutToggle = '<C-p>'
 
 let g:shfmt_opt="-ci -i 2"
