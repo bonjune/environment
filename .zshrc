@@ -62,7 +62,7 @@ DISABLE_AUTO_TITLE="true"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:/opt/homebrew/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Which plugins would you like to load?
