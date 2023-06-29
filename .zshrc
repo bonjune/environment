@@ -119,6 +119,7 @@ alias vi='nvim'
 alias sr='screen -D -r main'
 alias ta='tmux attach -t main'
 alias python='python3'
+alias eoe='eval $(opam env)'
 
 # use nvm 17 for coc
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
