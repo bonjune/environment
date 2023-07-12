@@ -66,31 +66,14 @@ if has('mac')
     py3f /opt/homebrew/Celler/llvm/12.0.1/share/clang/clang-format.py
   endfunction
 else
-  map <C-K> :py3f /usr/share/clang/clang-format-10/clang-format.py<cr>
-  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-10/clang-format.py<cr>
+  map <C-K> :py3f /usr/share/clang/clang-format-13/clang-format.py<cr>
+  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-13/clang-format.py<cr>
   function! Formatonsave()
     let l:formatdiff = 1
-    py3f /usr/share/clang/clang-format-10/clang-format.py
+    py3f /usr/share/clang/clang-format-13/clang-format.py
   endfunction
 endif
 autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => YouCompleteMe
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_python_binary_path = '/usr/bin/python3'
-
-"let g:ycm_server_keep_logfiles = 1
-"let g:ycm_server_log_level = 'debug'
-
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
-nnoremap <leader>p :YcmCompleter GetParent<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc
@@ -107,8 +90,6 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Run the Code Lens action on the current line.
 nmap <leader>cl  <Plug>(coc-codelens-action)
-
-
 
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "<Tab>"
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "<S-Tab>"
