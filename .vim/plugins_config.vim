@@ -131,17 +131,21 @@ imap <C-p> <Plug>(copilot-previous)
 imap <C-n> <Plug>(copilot-next)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Merlin with syntastic
+" => ALE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_ocaml_checkers = ['merlin']
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:ale_sign_error                  = '✘'
+let g:ale_sign_warning                = '⚠'
+highlight ALEErrorSign ctermbg        =NONE ctermfg=red
+highlight ALEWarningSign ctermbg      =NONE ctermfg=yellow
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:ale_linters = {
+\   'ocaml':      ['merlin'],
+\}
+
+let g:ale_fixers = {
+\   'ocaml':      ['ocamlformat'],
+\   '*':          ['remove_trailing_lines', 'trim_whitespace'],
+\}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => AutoPairs
@@ -150,4 +154,4 @@ let g:syntastic_check_on_wq = 0
 " conflicting with Esc and paste
 let g:AutoPairsShortcutToggle = '<C-p>'
 
-let g:shfmt_opt="-ci -i 2"
+let g:shfmt_opt = "-ci -i 2"

@@ -13,7 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot', { 'branch': 'v4.2.1' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'souffle-lang/souffle.vim'
-Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
