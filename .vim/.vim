@@ -1,1 +1,0 @@
-/Users/kihong/environment/.vim
