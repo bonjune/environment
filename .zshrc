@@ -90,11 +90,6 @@ export C_INCLUDE_PATH=$HOME/.local/include
 export CPLUS_INCLUDE_PATH=$HOME/.local/include
 export LD_LIBRARY_PATH="$HOME/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/clang/lib/:$LD_LIBRARY_PATH"
 
-# use nvm 17 for coc
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-nvm use 17 > /dev/null
-
 if [ `uname` = 'Linux' ]; then
   # enable color support of ls and also add handy aliases
   if [ -x /usr/bin/dircolors ]; then
@@ -111,15 +106,21 @@ if [ `uname` = 'Linux' ]; then
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   export PYTHONPATH="$HOME/.local/lib/python3.8/site-packages"
 
+  # use nvm 17 for coc
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  nvm use 17 > /dev/null
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
   export PATH="$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
   eval "$(rbenv init -)"
 
+  # use nvm 17 for coc
   export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  nvm use 17 > /dev/null
 fi
 
 alias vi='nvim'
