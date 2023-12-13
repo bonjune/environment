@@ -115,12 +115,6 @@ else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
   export PATH="$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
   eval "$(rbenv init -)"
-
-  # use nvm 17 for coc
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-  nvm use 17 > /dev/null
 fi
 
 alias vi='nvim'
