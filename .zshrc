@@ -60,10 +60,10 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# pyenv
+
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:/opt/homebrew/bin:$PATH"
-eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -98,9 +98,9 @@ if [ `uname` = 'Linux' ]; then
   fi
 
   export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64"
-  export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/bongjun/javalib/jdom/build/jdom.jar'
+  export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:$HOME/javalib/jdom/build/jdom.jar'
   export OCAMLRUNPARAM='b' #'b, s=2G, l=1G, i=50M, o=80'
-  export PATH="$HOME/.local/bin:$HOME/go/bin:/snap/bin:$HOME/usr/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/lib/jvm/java-8-oracle/bin/:$HOME/.linuxbrew/bin:$PATH"
+  export PATH="$HOME/.local/bin:/snap/bin:/usr/lib/jvm/java-8-oracle/bin/:$HOME/.linuxbrew/bin:$PATH"
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   export PYTHONPATH="$HOME/.local/lib/python3.8/site-packages"
