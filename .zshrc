@@ -97,7 +97,7 @@ if [ `uname` = 'Linux' ]; then
     alias ls='ls --color=auto'
   fi
 
-  export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/bongjun/.linuxbrew/lib"
+  export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64"
   export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/bongjun/javalib/jdom/build/jdom.jar'
   export OCAMLRUNPARAM='b' #'b, s=2G, l=1G, i=50M, o=80'
   export PATH="$HOME/.local/bin:$HOME/go/bin:/snap/bin:$HOME/usr/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/lib/jvm/java-8-oracle/bin/:$HOME/.linuxbrew/bin:$PATH"
