@@ -96,6 +96,8 @@ inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "<S-Tab>"
 inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "<Up>"
 inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "<Down>"
 
+nmap <silent>rr <Plug>(coc-rename)
+
 " Turn on diagnostics always
 " autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow"') })
 " autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
