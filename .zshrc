@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="dst"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -60,17 +60,17 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos docker zsh-syntax-highlighting zsh-autosuggestions pyenv)
+plugins=(git docker zsh-syntax-highlighting zsh-autosuggestions pyenv)
 source $ZSH/oh-my-zsh.sh
 
 unsetopt share_history
@@ -100,9 +100,9 @@ if [ `uname` = 'Linux' ]; then
   export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64"
   export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:$HOME/javalib/jdom/build/jdom.jar'
   export OCAMLRUNPARAM='b' #'b, s=2G, l=1G, i=50M, o=80'
-  export PATH="$HOME/.local/bin:/snap/bin:/usr/lib/jvm/java-8-oracle/bin/:$HOME/.linuxbrew/bin:$PATH"
-  export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-  export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+  export PATH="$HOME/.local/bin:/usr/lib/jvm/java-8-oracle/bin/:$PATH"
+  # export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+  # export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   export PYTHONPATH="$HOME/.local/lib/python3.8/site-packages"
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
@@ -139,4 +139,3 @@ eval `opam config env`
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
