@@ -98,6 +98,25 @@ inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "<Down>"
 
 nmap <silent>rr <Plug>(coc-rename)
 
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => FZF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>h :History<CR>
+nnoremap <silent> <Leader>g :Commits<CR>
+
+
 " Turn on diagnostics always
 " autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow"') })
 " autocmd BufWritePost * call timer_start(10, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
