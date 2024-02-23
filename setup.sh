@@ -10,6 +10,8 @@ ln -s -f $(pwd)/.screenrc ~/.screenrc
 ln -s -f $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s -f $(pwd)/.tmux.conf.local ~/.tmux.conf.local
 
+
+mkdir -p ~/.config
 ln -s -f $(pwd)/nvim ~/.config/nvim
 ln -s -f $(pwd)/.pylintrc ~/.pylintrc
 

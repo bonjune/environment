@@ -66,11 +66,11 @@ if has('mac')
     py3f /opt/homebrew/Celler/llvm/12.0.1/share/clang/clang-format.py
   endfunction
 else
-  map <C-K> :py3f /usr/share/clang/clang-format-13/clang-format.py<cr>
-  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-13/clang-format.py<cr>
+  map <C-K> :py3f /usr/share/clang/clang-format-14/clang-format.py<cr>
+  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-14/clang-format.py<cr>
   function! Formatonsave()
     let l:formatdiff = 1
-    py3f /usr/share/clang/clang-format-13/clang-format.py
+    py3f /usr/share/clang/clang-format-14/clang-format.py
   endfunction
 endif
 autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
@@ -131,23 +131,6 @@ let g:copilot_no_tab_map = v:true
 " Use <C-p>, <C-n> to cycle through completion options.
 imap <C-p> <Plug>(copilot-previous)
 imap <C-n> <Plug>(copilot-next)
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ALE
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_sign_error                  = '✘'
-let g:ale_sign_warning                = '⚠'
-highlight ALEErrorSign ctermbg        =NONE ctermfg=red
-highlight ALEWarningSign ctermbg      =NONE ctermfg=yellow
-
-let g:ale_linters = {
-\   'ocaml':      ['merlin'],
-\}
-
-let g:ale_fixers = {
-\   'ocaml':      ['ocamlformat'],
-\   '*':          ['remove_trailing_lines', 'trim_whitespace'],
-\}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => AutoPairs
