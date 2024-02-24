@@ -16,8 +16,6 @@ ln -s -f $(pwd)/.pylintrc ~/.pylintrc
 # python support for neovim
 pip3 install pynvim
 
-curl https://pyenv.run | bash
-
 # install oh-my-zsh
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
