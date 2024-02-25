@@ -1,0 +1,7 @@
+[alias]
+	st = status
+	cm = commit
+	sw = switch
+[user]
+	name = Bongjun
+	email = bongjun.jang@kaist.ac.kr
