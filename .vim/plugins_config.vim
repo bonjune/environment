@@ -111,7 +111,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-f> :GFiles<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <Leader>g :Commits<CR>
