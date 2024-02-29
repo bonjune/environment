@@ -6,3 +6,5 @@
 [user]
 	name = Bongjun
 	email = bongjun.jang@kaist.ac.kr
+[pull]
+	rebase = true
