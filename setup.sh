@@ -9,14 +9,28 @@ ln -s -f $(pwd)/.vimrc ~/.vimrc
 ln -s -f $(pwd)/.screenrc ~/.screenrc
 ln -s -f $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s -f $(pwd)/.tmux.conf.local ~/.tmux.conf.local
+ln -s -f $(pwd)/.gitconfig ~/.gitconfig
 
 
 mkdir -p ~/.config
 ln -s -f $(pwd)/nvim ~/.config/nvim
 ln -s -f $(pwd)/.pylintrc ~/.pylintrc
 
+# install neovim (latest), ref: https://github.com/neovim/neovim/blob/master/INSTALL.md
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+
+
 # python support for neovim
 pip3 install pynvim
+
+# install nodejs (neovim dependency)
+sudo apt-get install -y curl
+curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
+sudo -E bash nodesource_setup.sh
+sudo apt-get install -y nodejs
+node -v
 
 # install oh-my-zsh
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
