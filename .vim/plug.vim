@@ -10,7 +10,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-fugitive'
-Plug 'sheerun/vim-polyglot', { 'branch': 'v4.2.1' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'souffle-lang/souffle.vim'
 Plug 'github/copilot.vim'
