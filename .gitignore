@@ -3,3 +3,5 @@
 .vim/bundle/*
 .vim/autoload
 .vim/plugged
+nodesource_setup.sh
+nvim-linux64.tar.gz
