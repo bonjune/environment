@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+sudo apt-get install -y curl tmux zsh
+
 ln -s -f $(pwd)/.bash_profile ~/.bash_profile
 ln -s -f $(pwd)/.bashrc ~/.bashrc
 ln -s -f $(pwd)/.zshrc ~/.zshrc
@@ -26,7 +28,6 @@ sudo tar -C /opt -xzf nvim-linux64.tar.gz
 pip3 install pynvim
 
 # install nodejs (neovim dependency)
-sudo apt-get install -y curl
 curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo -E bash nodesource_setup.sh
 sudo apt-get install -y nodejs
@@ -36,10 +37,13 @@ node -v
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+ln -s -f $(pwd)/.zshrc ~/.zshrc
 if [[ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 if [[ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]]; then
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
+
+omz reload
 
